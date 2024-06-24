@@ -1,5 +1,8 @@
 import React from "react";
 import { Container, FooterBar, List, ListFooter, ListOption, MenuLink, NavBar } from "./LayoutStyles";
+import gmailLogo from "../../assets/gmail-logo.png"
+import githubLogo from "../../assets/github-sign.png"
+import linkedinLogo from "../../assets/social.png"
 
 type LayoutProps = {
   children: React.ReactNode
@@ -24,9 +27,9 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
       {children}
       <FooterBar>
         <ListFooter>
-          <ListOption><MenuLink to=""></MenuLink></ListOption>
-          <ListOption><MenuLink to=""></MenuLink></ListOption>
-          <ListOption><MenuLink to=""></MenuLink></ListOption>
+          <ListOption><a href=""> <img src={githubLogo}/> </a></ListOption>
+          <ListOption><a href=""> <img src={gmailLogo}/> </a></ListOption>
+          <ListOption><a href=""> <img src={linkedinLogo}/> </a></ListOption>
         </ListFooter>
       </FooterBar>
     </Container>

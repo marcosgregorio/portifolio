@@ -39,6 +39,10 @@ export const ListOption = styled.li`
     color: ${(props) => props.theme.colors.white};
     text-decoration: none;
     padding: 1em;
+    > img {
+      width: 2em;
+      height: 2em;
+    }
   }
 `;
 
