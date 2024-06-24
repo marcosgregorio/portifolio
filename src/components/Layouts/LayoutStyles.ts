@@ -24,6 +24,7 @@ export const List = styled.ul`
 
 export const ListOption = styled.li`
   > a {
+  transition: all 0.3s;
     &:hover {
       background-color: #444;
     }
@@ -31,4 +32,26 @@ export const ListOption = styled.li`
     text-decoration: none;
     padding: 1em;
   }
+`;
+
+export const FooterBar = styled.nav`
+    width: 40%;
+    position: fixed;
+    bottom: 0;
+`;
+
+export const ListFooter = styled.ul`
+  list-style-type: none;
+a
+  margin: 0;
+  padding: 1em;
+
+  overflow: hidden;
+
+  background-color: #333;
+
+  display: flex;
+  justify-content: space-around;
+
+  border-radius: 0px 25px 0px 0px ;
 `;
