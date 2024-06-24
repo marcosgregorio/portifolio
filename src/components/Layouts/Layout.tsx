@@ -1,29 +1,32 @@
-import { Container, FooterBar, List, ListFooter, ListOption, NavBar } from "./LayoutStyles";
+import React from "react";
+import { Container, FooterBar, List, ListFooter, ListOption, MenuLink, NavBar } from "./LayoutStyles";
 
-type LayoutProps = {};
+type LayoutProps = {
+  children: React.ReactNode
+};
 
-export const Layout: React.FC<LayoutProps> = () => {
+export const Layout: React.FC<LayoutProps> = ({children}) => {
   return (
     <Container>
       <NavBar>
         <List>
           <ListOption>
-            <a href="">Projetos </a>
+            <MenuLink to="/projects">Projetos </MenuLink>
           </ListOption>
           <ListOption>
-            <a href="">Experiencias </a>
+            <MenuLink to="/experience">Experiencias </MenuLink>
           </ListOption>
           <ListOption>
-            <a href="">Home </a>
+            <MenuLink to="/">Home </MenuLink>
           </ListOption>
         </List>
       </NavBar>
-      {/* Childrens */}
+      {children}
       <FooterBar>
         <ListFooter>
-          <ListOption><a href=""></a></ListOption>
-          <ListOption><a href=""></a></ListOption>
-          <ListOption><a href=""></a></ListOption>
+          <ListOption><MenuLink to=""></MenuLink></ListOption>
+          <ListOption><MenuLink to=""></MenuLink></ListOption>
+          <ListOption><MenuLink to=""></MenuLink></ListOption>
         </ListFooter>
       </FooterBar>
     </Container>

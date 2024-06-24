@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -61,3 +62,7 @@ export const ListFooter = styled.ul`
 
   border-radius: 0px 25px 0px 0px;
 `;
+
+export const MenuLink = styled(Link)`
+
+`
