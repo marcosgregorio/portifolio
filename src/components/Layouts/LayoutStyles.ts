@@ -16,7 +16,9 @@ export const NavBar = styled.nav`
   width: 40%;
 `;
 
-export const ChildrenContainer = styled.main``;
+export const ChildrenContainer = styled.main`
+  margin:1em;
+`;
 
 export const List = styled.ul`
   list-style-type: none;
