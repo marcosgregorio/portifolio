@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const SectionAboutMe = styled.section`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 
   height: 80vh;
 
@@ -22,25 +22,41 @@ export const SectionAboutMe = styled.section`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  > img {
-    width: 10%;
-    height: 25%;
-    border-radius: 100px;
-    border: 1px solid #444;
-  }
 `;
 
 export const Section = styled.section`
-    /* height: 80vh; */
+  /* height: 80vh; */
 `;
 
 export const TextBox = styled.div`
-
+  width: 50%;
+  height: 60vh;
+  > h2 {
+    text-align: center;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+  }
+  #foto {
+    width: 15em;
+    height: 15em;
+  }
+  padding: 1em;
+  border-radius: 15px;
   color: black;
   background-color: #ffff;
 
-  > p {
-    text-align: center;
+  > span {
   }
+
+  box-shadow: 1px 1px 5px 4px #333;
 `;
+
+export const TextBoxContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+`
