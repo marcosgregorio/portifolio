@@ -40,16 +40,13 @@ export const TextBox = styled.div`
     gap: 5em;
   }
   #foto {
-    width: 15em;
-    height: 15em;
+    width: 13em;
+    height: 13em;
   }
-  padding: 1em;
+  padding: 2em;
   border-radius: 15px;
   color: black;
   background-color: #ffff;
-
-  > span {
-  }
 
   box-shadow: 1px 1px 5px 4px #333;
 `;
