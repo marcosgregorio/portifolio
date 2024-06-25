@@ -31,6 +31,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <MenuLink to="/experience">Experiencias </MenuLink>
           </ListOption>
           <ListOption>
+            <MenuLink to="/about">Sobre mim</MenuLink>
+          </ListOption>
+          <ListOption>
             <MenuLink to="/">Home </MenuLink>
           </ListOption>
         </List>

@@ -1,7 +1,7 @@
-import { Container, Section, SectionAboutMe, TextBox } from "./HomeStyles";
+import { Container, Section, SectionAboutMe, TextBox } from "./AboutStyles";
 import homemLindo from "../../assets/foto homem mais lindo do mundo(1).png"
 
-export const Home: React.FC = () => {
+export const About: React.FC = () => {
   return (
     <Container>
       <SectionAboutMe>

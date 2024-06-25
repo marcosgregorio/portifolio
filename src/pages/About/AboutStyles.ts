@@ -36,8 +36,6 @@ export const Section = styled.section`
 `;
 
 export const TextBox = styled.div`
-  width: 30%;
-  padding: 1em;
 
   color: black;
   background-color: #ffff;
@@ -45,7 +43,4 @@ export const TextBox = styled.div`
   > p {
     text-align: center;
   }
-
-  border-radius: 50px;
-  box-shadow: 1px 1px 5px 4px #333;
 `;

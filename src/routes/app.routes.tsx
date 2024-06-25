@@ -3,6 +3,7 @@ import { Layout } from "../components/Layouts/Layout"
 import { Home } from "../pages/Home/Home"
 import { Experiences } from "../pages/Experiences/Experiences"
 import { Projects } from "../pages/Projects/Projects"
+import { About } from "../pages/About/About"
 
 export const AppRoutes:React.FC = () => {
     return (
@@ -10,6 +11,7 @@ export const AppRoutes:React.FC = () => {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
+                    <Route path="/about" element={<About/>}></Route>
                     <Route path="/experience" element={<Experiences/>}></Route>
                     <Route path="/projects" element={<Projects/>}></Route>
                 </Routes>
