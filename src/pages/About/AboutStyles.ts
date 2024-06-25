@@ -24,10 +24,6 @@ export const SectionAboutMe = styled.section`
   background-size: cover;
 `;
 
-export const Section = styled.section`
-  /* height: 80vh; */
-`;
-
 export const TextBox = styled.div`
   width: 50%;
   height: 60vh;
@@ -43,11 +39,11 @@ export const TextBox = styled.div`
     width: 13em;
     height: 13em;
   }
+
   padding: 2em;
   border-radius: 15px;
   color: black;
   background-color: #ffff;
-
   box-shadow: 1px 1px 5px 4px #333;
 `;
 
@@ -56,4 +52,12 @@ export const TextBoxContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 90%;
-`
+`;
+
+export const TextAboutMe = styled.div`
+  max-height: 90%;
+  overflow: auto;
+  > p {
+    font-size: 1.2em;
+  }
+`;

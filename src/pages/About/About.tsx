@@ -1,4 +1,4 @@
-import { Container, Section, SectionAboutMe, TextBox, TextBoxContainer } from "./AboutStyles";
+import { Container, SectionAboutMe, TextAboutMe, TextBox, TextBoxContainer } from "./AboutStyles";
 import homemLindo from "../../assets/foto homem mais lindo do mundo(1).png";
 
 export const About: React.FC = () => {
@@ -11,7 +11,7 @@ export const About: React.FC = () => {
             <div>
               <img id="foto" src={homemLindo} alt="Homem mais lindo do universo" />
             </div>
-            <span>
+            <TextAboutMe>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
                 placeat, eveniet dolores eaque laborum consequatur ducimus vel
@@ -30,7 +30,7 @@ export const About: React.FC = () => {
                 quibusdam obcaecati incidunt ut atque quae dignissimos?
                 Voluptatibus, pariatur error.
               </p>
-            </span>
+            </TextAboutMe>
           </TextBoxContainer>
         </TextBox>
       </SectionAboutMe>
