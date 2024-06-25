@@ -3,16 +3,20 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   /* display: grid;
-    grid-template-areas:
-    "AS AS"
-    "AS CT"; */
-  height: 100vh;
+  grid-template-areas:
+    "HE HE"
+    "FO FO"; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #011;
 `;
 
 export const NavBar = styled.nav`
   width: 40%;
 `;
+
+export const ChildrenContainer = styled.main``;
 
 export const List = styled.ul`
   list-style-type: none;
@@ -29,6 +33,8 @@ export const List = styled.ul`
 
   border-radius: 0px 0px 25px 0px;
 `;
+
+export const BackgroundImage = styled.img``;
 
 export const ListOption = styled.li`
   > a {

@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ChildrenContainer,
   Container,
   FooterBar,
   List,
@@ -34,7 +35,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </ListOption>
         </List>
       </NavBar>
-      {children}
+      <ChildrenContainer>{children}</ChildrenContainer>
       <FooterBar>
         <ListFooter>
           <ListOptionFooter>
