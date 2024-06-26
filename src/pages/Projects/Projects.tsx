@@ -13,26 +13,39 @@ export const Projects: React.FC = () => {
 
   useEffect(() => {
     const fetchRepos = async () => {
-      console.log("entrei no fetch repo");
-      type Repo = {
-        name: string;
-      };
-      const repoResponse = await axios.get(
-        "https://api.github.com/users/marcosgregorio/repos"
-      );
-      const repos = repoResponse.data;
+      setLoading(true);
 
-      const readmes = Promise.all(
-        repos.map(async (repo: Repo) => {
-          console.log("fazendo get no readme");
-          const readmeResponse = await axios.get(
-            `https://api.github.com/repos/marcosgregorio/${repo.name}/README.md`,
-            { headers: { Accept: "application/vnd.github.v3.raw" } }
-          );
-          console.log(readmeResponse);
-          return { name: repo.name, readme: readmeResponse.data };
-        })
-      );
+      try {
+        if (!loading) return;
+
+        console.log("entrei no fetch repo");
+        type Repo = {
+          name: string;
+        };
+        const repoResponse = await axios.get(
+          "https://api.github.com/users/marcosgregorio/repos"
+        );
+        const repos = repoResponse.data;
+
+        const readmes = Promise.all(
+          repos.map(async (repo: Repo) => {
+            console.log("fazendo get no readme");
+            const readmeResponse = await axios.get(
+              `https://api.github.com/repos/marcosgregorio/${repo.name}/README.md`,
+              { headers: { Accept: "application/vnd.github.v3.raw" } }
+            );
+            console.log(readmeResponse);
+            return { name: repo.name, readme: readmeResponse.data };
+          })
+        );
+      } catch (error) {
+        console.error(
+          "Ocorreu um erro ao buscar os repositorios do Github",
+          error
+        );
+      } finally {
+        setLoading(false);
+      }
     };
     fetchRepos();
   }, []);
