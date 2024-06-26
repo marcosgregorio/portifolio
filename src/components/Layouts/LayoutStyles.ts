@@ -12,28 +12,6 @@ export const Container = styled.div`
   background-color: #011;
 `;
 
-const loadingAnimation = keyframes`
-  0% {opacity: 1;}
-  25% {opacity: 0.25;}
-  50% {opacity: 0.5;}
-  100% {opacity: 1;}
-`;
-
-export const LoadingOverlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255, 0.5);
-  z-index: 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  > div {
-    font-size: 2em;
-    animation: ${loadingAnimation} 2s infinite;
-  }
-`;
-
 export const ContainerNavBar = styled.div`
   width: 100%;
   height: 2em;

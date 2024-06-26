@@ -8,7 +8,6 @@ import {
   ListFooter,
   ListOption,
   ListOptionFooter,
-  LoadingOverlay,
   MenuLink,
   NavBar,
   SocialMediaLogo,
@@ -22,14 +21,10 @@ type LayoutProps = {
 };
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [loading, setLoading] = useState<Boolean>(true);
+  const [loading, setLoading] = useState<Boolean>(false);
+
   return (
     <Container>
-      {loading && (
-        <LoadingOverlay>
-          <div>Loading...</div>
-        </LoadingOverlay>
-      )}
       <ContainerNavBar>
         <NavBar>
           <List>

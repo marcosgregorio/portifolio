@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Card } from "../../components/Card/Card";
 import { Container } from "./ProjectsStyles";
 import axios from "axios";
+import { LoadingOverlay } from "../../components/LoadingOverlay/LoadingOverlay";
 
 type Repository = {
   icon: string;
@@ -52,6 +53,7 @@ export const Projects: React.FC = () => {
 
   return (
     <Container>
+      {loading && <LoadingOverlay />}
       <div>
         {repos &&
           repos.map((repo) => (
