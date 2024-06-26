@@ -12,12 +12,18 @@ export const Container = styled.div`
   background-color: #011;
 `;
 
+export const ContainerNavBar = styled.div`
+  width: 100%;
+  height: 2em;
+`
+
 export const NavBar = styled.nav`
   width: 40%;
+  position: fixed;
 `;
 
 export const ChildrenContainer = styled.main`
-  margin:1em;
+  margin: 2em;
 `;
 
 export const List = styled.ul`
@@ -70,7 +76,7 @@ export const SocialMediaLogo = styled.img`
 `;
 
 export const FooterBar = styled.nav`
-  width: 40%;
+  width: 30%;
   position: fixed;
   bottom: 0;
 `;
@@ -78,7 +84,7 @@ export const FooterBar = styled.nav`
 export const ListFooter = styled.ul`
   list-style-type: none;
   margin: 0;
-  padding: 1em;
+  padding: .5em;
 
   overflow: hidden;
 
