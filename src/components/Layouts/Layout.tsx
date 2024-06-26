@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ChildrenContainer,
   Container,
@@ -8,6 +8,7 @@ import {
   ListFooter,
   ListOption,
   ListOptionFooter,
+  LoadingOverlay,
   MenuLink,
   NavBar,
   SocialMediaLogo,
@@ -21,8 +22,14 @@ type LayoutProps = {
 };
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [loading, setLoading] = useState<Boolean>(true);
   return (
     <Container>
+      {loading && (
+        <LoadingOverlay>
+          <div>Loading...</div>
+        </LoadingOverlay>
+      )}
       <ContainerNavBar>
         <NavBar>
           <List>

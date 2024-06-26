@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   /* display: grid;
@@ -12,10 +12,32 @@ export const Container = styled.div`
   background-color: #011;
 `;
 
+const loadingAnimation = keyframes`
+  0% {opacity: 1;}
+  25% {opacity: 0.25;}
+  50% {opacity: 0.5;}
+  100% {opacity: 1;}
+`;
+
+export const LoadingOverlay = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.5);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div {
+    font-size: 2em;
+    animation: ${loadingAnimation} 2s infinite;
+  }
+`;
+
 export const ContainerNavBar = styled.div`
   width: 100%;
   height: 2em;
-`
+`;
 
 export const NavBar = styled.nav`
   width: 40%;
@@ -84,7 +106,7 @@ export const FooterBar = styled.nav`
 export const ListFooter = styled.ul`
   list-style-type: none;
   margin: 0;
-  padding: .5em;
+  padding: 0.5em;
 
   overflow: hidden;
 
