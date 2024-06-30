@@ -10,12 +10,12 @@ type Repository = {
 };
 export const Projects: React.FC = () => {
   const [repos, setRepos] = useState<Repository[]>();
-  const [loading, setLoading] = useState<boolean>();
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchRepos = async () => {
       setLoading(true);
-
+      return;
       try {
         if (!loading) return;
 
@@ -53,7 +53,6 @@ export const Projects: React.FC = () => {
 
   return (
     <Container>
-      {loading && <LoadingOverlay />}
       <div>
         {repos &&
           repos.map((repo) => (

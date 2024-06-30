@@ -24,6 +24,9 @@ export const NavBar = styled.nav`
 
 export const ChildrenContainer = styled.main`
   margin: 2em;
+  background-color: red;
+  height: 85vh;
+  overflow: auto;
 `;
 
 export const List = styled.ul`

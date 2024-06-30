@@ -1,6 +1,8 @@
 import { LoadingOverlayContainer } from "./LoadingOverlayStyles";
 
-export const LoadingOverlay: React.FC = () => (
+type LoadingOverlayProps = {};
+
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = () => (
   <LoadingOverlayContainer>
     <div>Loading...</div>
   </LoadingOverlayContainer>

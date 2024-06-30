@@ -15,6 +15,7 @@ import {
 import gmailLogo from "../../assets/gmail-logo.png";
 import githubLogo from "../../assets/github-sign.png";
 import linkedinLogo from "../../assets/social.png";
+import { LoadingOverlay } from "../LoadingOverlay/LoadingOverlay";
 
 type LayoutProps = {
   children: React.ReactNode;
